@@ -15,12 +15,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 Route::group(['middleware' => 'auth:sanctum'], function(){
-    //All secure URL's
     Route::get('/user', function (Request $request) {
         return Auth::user();
     });
     Route::post('/logout', [UserController::class, 'logout']);
-    });
 
+});
 
 Route::post("login",[UserController::class,'index']);
