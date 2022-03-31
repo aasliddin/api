@@ -2,7 +2,6 @@ version: '3.7'
 services:
   app:
     build: ./docker/app
-    container_name: mobile
     working_dir: /var/www
     volumes:
       - ./:/var/www/
@@ -10,17 +9,15 @@ services:
       - mobile
   cron:
     build: ./docker/cron
-    container_name: mobile-cron
     working_dir: /var/www
     volumes:
       - ./:/var/www/
     networks:
       - mobile
   web:
-    image: nginx:alpine
-    container_name: mobile-nginx
+    image: nginx:latest
     ports:
-      - "81:80"
+      - "8081:80"
     volumes:
       - ./:/var/www
       - ./docker/nginx/log:/var/log/nginx
@@ -29,7 +26,6 @@ services:
       - mobile
   db:
     image: mysql:8.0
-    container_name: mobile-db
     command: --default-authentication-plugin=mysql_native_password
     environment:
       - MYSQL_ROOT_HOST=%
@@ -43,7 +39,6 @@ services:
       - "3307:3306"
   redis:
     image: "redis:alpine"
-    container_name: mobile-redis
     networks:
         - mobile
 
