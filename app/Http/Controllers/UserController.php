@@ -15,8 +15,8 @@ class UserController extends Controller
         // return $user;
             if (!$user || !Hash::check($request->password, $user->password)) {
                 return response([
-                    'message' => ['These credentials do not match our records.']
-                ], 404);
+                    'exror' => ['Parol login xato']
+                ], 401);
             }
         
              $token = $user->createToken('my-app-token')->plainTextToken;
@@ -35,5 +35,47 @@ class UserController extends Controller
         return [
             'message' => 'Tokens Revoked'
         ];
+    }
+
+    public function register(Request $request){
+        if(empty($request->name)){
+            return response()->json([
+                'msg'=> "Name empty"
+            ], 422);        
+        }
+        if(strlen($request->name)<3){
+            return response()->json([
+                'msg'=> "Name 3tadan kam belgi"
+            ], 422);        
+        }
+        if(empty($request->email)){
+            return response()->json([
+                'msg'=> "email empty"
+            ], 422);        
+        }
+        if(!empty(User::where('email',$request->email)->first())){
+            return response()->json([
+                'msg'=> "email alridy "
+            ], 422);        
+        }
+        $data = [
+            "name" => $request->name,
+            "email" => $request->email,
+        ];
+        // return $data;
+        $p = $request->password;
+        $p_r = $request->return_password;
+        if($p != "" || $p_r != ""){
+            if($p != $p_r){
+                return response()->json([
+                    'msg'=> "You entered two password differently"
+                ], 422);        
+            }
+            $password = bcrypt($request->password);
+            $data["password"] = $password;
+        } 
+        
+        $user = User::create($data);
+        return $user;
     }
 }

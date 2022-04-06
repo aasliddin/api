@@ -37,10 +37,7 @@ services:
       - mobile
     ports:
       - "3307:3306"
-  redis:
-    image: "redis:alpine"
-    networks:
-        - mobile
+ 
 
 #Docker Networks
 networks:

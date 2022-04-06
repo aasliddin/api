@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -15,11 +16,15 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 Route::group(['middleware' => 'auth:sanctum'], function(){
-    Route::get('/user', function (Request $request) {
-        return Auth::user();
-    });
     Route::post('/logout', [UserController::class, 'logout']);
-
+    Route::prefix('/message')
+    ->group(function () {
+        Route::get('/', [MessageController::class,'getMessage']);
+        Route::get('/all', [MessageController::class,'allMessage']);
+        Route::post('/create', [MessageController::class,'createMessage']);
+        Route::post('/update', [MessageController::class,'updateMessage']);
+    });
 });
 
-Route::post("login",[UserController::class,'index']);
+Route::any("login",[UserController::class,'index'])->name('login');;
+Route::any("register",[UserController::class,'register'])->name('register');;
