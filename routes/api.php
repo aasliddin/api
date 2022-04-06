@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\StatusController;
+
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -20,9 +22,14 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::prefix('/message')
     ->group(function () {
         Route::get('/', [MessageController::class,'getMessage']);
-        Route::get('/all', [MessageController::class,'allMessage']);
         Route::post('/create', [MessageController::class,'createMessage']);
         Route::post('/update', [MessageController::class,'updateMessage']);
+        Route::post('/bajardi', [MessageController::class,'updateMessage']);
+    });
+    Route::prefix('/status')
+    ->group(function () {
+        Route::post('/create', [StatusController::class,'createStatus']);
+        Route::post('/update', [StatusController::class,'updateStatus']);
     });
 });
 

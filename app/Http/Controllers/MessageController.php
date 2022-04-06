@@ -9,18 +9,20 @@ class MessageController extends Controller
 {
     public function getMessage()
     {
-        $mes=Messages::where('user_id',Auth::user()->id)->with('user')->get();
-        return response()->json(
-            $mes
-        , 200);   
-    }
-    public function allMessage()
-    {
-        $mes=Messages::with('user')->get();
+        if(Auth::user()->role==1)
+            {
+                $mes=Messages::where('user_id',Auth::user()->id)->with('reyting')->with('manager')->get();
+                return response()->json(
+                    $mes
+                , 200);
+            }
+        $mes=Messages::with('user')->with('reyting')->with('manager.user')->get();
         return response()->json(
             $mes
         , 200);
+
     }
+
     public function createMessage(Request $request)
     {
         if(empty($request->text)){
