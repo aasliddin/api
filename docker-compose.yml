@@ -1,6 +1,7 @@
 version: '3.7'
 services:
   app:
+    restart: always
     build: ./docker/app
     working_dir: /var/www
     volumes:
@@ -8,6 +9,7 @@ services:
     networks:
       - mobile
   cron:
+    restart: always
     build: ./docker/cron
     working_dir: /var/www
     volumes:
@@ -15,6 +17,7 @@ services:
     networks:
       - mobile
   web:
+    restart: always
     image: nginx:latest
     ports:
       - "8081:80"
@@ -25,6 +28,7 @@ services:
     networks:
       - mobile
   db:
+    restart: always
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment:

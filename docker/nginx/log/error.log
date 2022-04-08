@@ -236,3 +236,637 @@
 2022/03/31 17:03:37 [notice] 1#1: start worker process 37
 2022/03/31 17:06:48 [error] 26#26: *8 "/var/www/public/api/index.php" is not found (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /api/ HTTP/1.0", host: "jbnuu.jbnuu"
 2022/03/31 17:07:36 [error] 27#27: *9 open() "/var/www/public/api/logout" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /api/logout HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:38:34 [error] 29#29: *13 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:38:37 [error] 31#31: *14 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:38:57 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/03/31 17:38:57 [notice] 22#22: gracefully shutting down
+2022/03/31 17:38:57 [notice] 23#23: gracefully shutting down
+2022/03/31 17:38:57 [notice] 22#22: exiting
+2022/03/31 17:38:57 [notice] 24#24: gracefully shutting down
+2022/03/31 17:38:57 [notice] 25#25: gracefully shutting down
+2022/03/31 17:38:57 [notice] 23#23: exiting
+2022/03/31 17:38:57 [notice] 27#27: gracefully shutting down
+2022/03/31 17:38:57 [notice] 24#24: exiting
+2022/03/31 17:38:57 [notice] 25#25: exiting
+2022/03/31 17:38:57 [notice] 22#22: exit
+2022/03/31 17:38:57 [notice] 26#26: gracefully shutting down
+2022/03/31 17:38:57 [notice] 29#29: gracefully shutting down
+2022/03/31 17:38:57 [notice] 28#28: gracefully shutting down
+2022/03/31 17:38:57 [notice] 27#27: exiting
+2022/03/31 17:38:57 [notice] 29#29: exiting
+2022/03/31 17:38:57 [notice] 26#26: exiting
+2022/03/31 17:38:57 [notice] 24#24: exit
+2022/03/31 17:38:57 [notice] 28#28: exiting
+2022/03/31 17:38:57 [notice] 23#23: exit
+2022/03/31 17:38:57 [notice] 25#25: exit
+2022/03/31 17:38:57 [notice] 34#34: gracefully shutting down
+2022/03/31 17:38:57 [notice] 29#29: exit
+2022/03/31 17:38:57 [notice] 34#34: exiting
+2022/03/31 17:38:57 [notice] 27#27: exit
+2022/03/31 17:38:57 [notice] 33#33: gracefully shutting down
+2022/03/31 17:38:57 [notice] 31#31: gracefully shutting down
+2022/03/31 17:38:57 [notice] 34#34: exit
+2022/03/31 17:38:57 [notice] 33#33: exiting
+2022/03/31 17:38:57 [notice] 28#28: exit
+2022/03/31 17:38:57 [notice] 31#31: exiting
+2022/03/31 17:38:57 [notice] 26#26: exit
+2022/03/31 17:38:57 [notice] 33#33: exit
+2022/03/31 17:38:57 [notice] 31#31: exit
+2022/03/31 17:38:57 [notice] 35#35: gracefully shutting down
+2022/03/31 17:38:57 [notice] 35#35: exiting
+2022/03/31 17:38:57 [notice] 30#30: gracefully shutting down
+2022/03/31 17:38:57 [notice] 30#30: exiting
+2022/03/31 17:38:57 [notice] 35#35: exit
+2022/03/31 17:38:57 [notice] 30#30: exit
+2022/03/31 17:38:57 [notice] 36#36: gracefully shutting down
+2022/03/31 17:38:57 [notice] 36#36: exiting
+2022/03/31 17:38:57 [notice] 36#36: exit
+2022/03/31 17:38:57 [notice] 32#32: gracefully shutting down
+2022/03/31 17:38:57 [notice] 32#32: exiting
+2022/03/31 17:38:57 [notice] 32#32: exit
+2022/03/31 17:38:57 [notice] 37#37: gracefully shutting down
+2022/03/31 17:38:57 [notice] 37#37: exiting
+2022/03/31 17:38:57 [notice] 37#37: exit
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/03/31 17:38:57 [notice] 1#1: worker process 25 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2022/03/31 17:38:57 [notice] 1#1: worker process 23 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/03/31 17:38:57 [notice] 1#1: worker process 31 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/03/31 17:38:57 [notice] 1#1: worker process 35 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/03/31 17:38:57 [notice] 1#1: worker process 28 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2022/03/31 17:38:57 [notice] 1#1: worker process 26 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/03/31 17:38:57 [notice] 1#1: worker process 33 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/03/31 17:38:57 [notice] 1#1: worker process 24 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: worker process 34 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/03/31 17:38:57 [notice] 1#1: worker process 32 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/03/31 17:38:57 [notice] 1#1: worker process 30 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2022/03/31 17:38:57 [notice] 1#1: worker process 37 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/03/31 17:38:57 [notice] 1#1: worker process 22 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: worker process 27 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: worker process 36 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 17:38:57 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/03/31 17:38:57 [notice] 1#1: worker process 29 exited with code 0
+2022/03/31 17:38:57 [notice] 1#1: exit
+2022/03/31 17:39:15 [notice] 1#1: using the "epoll" event method
+2022/03/31 17:39:15 [notice] 1#1: nginx/1.21.6
+2022/03/31 17:39:15 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/03/31 17:39:15 [notice] 1#1: OS: Linux 5.13.0-39-generic
+2022/03/31 17:39:15 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/03/31 17:39:15 [notice] 1#1: start worker processes
+2022/03/31 17:39:15 [notice] 1#1: start worker process 22
+2022/03/31 17:39:15 [notice] 1#1: start worker process 23
+2022/03/31 17:39:15 [notice] 1#1: start worker process 24
+2022/03/31 17:39:15 [notice] 1#1: start worker process 25
+2022/03/31 17:39:15 [notice] 1#1: start worker process 26
+2022/03/31 17:39:15 [notice] 1#1: start worker process 27
+2022/03/31 17:39:15 [notice] 1#1: start worker process 28
+2022/03/31 17:39:15 [notice] 1#1: start worker process 29
+2022/03/31 17:39:15 [notice] 1#1: start worker process 30
+2022/03/31 17:39:15 [notice] 1#1: start worker process 31
+2022/03/31 17:39:15 [notice] 1#1: start worker process 32
+2022/03/31 17:39:15 [notice] 1#1: start worker process 33
+2022/03/31 17:39:15 [notice] 1#1: start worker process 34
+2022/03/31 17:39:15 [notice] 1#1: start worker process 35
+2022/03/31 17:39:15 [notice] 1#1: start worker process 36
+2022/03/31 17:39:15 [notice] 1#1: start worker process 37
+2022/03/31 17:39:18 [error] 22#22: *1 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:39:19 [error] 23#23: *2 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:39:19 [error] 26#26: *3 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:39:38 [error] 28#28: *9 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:40:03 [error] 30#30: *10 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:40:04 [error] 31#31: *11 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:40:04 [error] 29#29: *12 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:40:05 [error] 33#33: *13 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:40:05 [error] 34#34: *14 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:41:15 [error] 35#35: *17 open() "/var/www/public/api/login" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "POST /api/login HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:43:35 [error] 36#36: *20 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:46:27 [error] 22#22: *21 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:47:25 [error] 22#22: *22 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:47:25 [error] 22#22: *23 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:48:42 [error] 22#22: *26 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:49:37 [error] 22#22: *27 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:49:38 [error] 22#22: *28 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:49:38 [error] 22#22: *29 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:49:38 [error] 22#22: *30 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:49:39 [error] 22#22: *31 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:52:00 [error] 22#22: *32 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:52:02 [error] 22#22: *34 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:52:02 [error] 22#22: *35 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:53:42 [error] 23#23: *40 open() "/var/www/public/asd" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /asd HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:53:47 [error] 23#23: *41 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:59:35 [error] 23#23: *42 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 17:59:36 [error] 23#23: *43 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 18:04:49 [error] 23#23: *44 open() "/var/www/public/user" failed (2: No such file or directory), client: 172.19.0.1, server: _, request: "GET /user HTTP/1.0", host: "jbnuu.jbnuu"
+2022/03/31 18:10:55 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/03/31 18:10:55 [notice] 23#23: gracefully shutting down
+2022/03/31 18:10:55 [notice] 26#26: gracefully shutting down
+2022/03/31 18:10:55 [notice] 24#24: gracefully shutting down
+2022/03/31 18:10:55 [notice] 25#25: gracefully shutting down
+2022/03/31 18:10:55 [notice] 27#27: gracefully shutting down
+2022/03/31 18:10:55 [notice] 24#24: exiting
+2022/03/31 18:10:55 [notice] 28#28: gracefully shutting down
+2022/03/31 18:10:55 [notice] 22#22: gracefully shutting down
+2022/03/31 18:10:55 [notice] 23#23: exiting
+2022/03/31 18:10:55 [notice] 26#26: exiting
+2022/03/31 18:10:55 [notice] 29#29: gracefully shutting down
+2022/03/31 18:10:55 [notice] 30#30: gracefully shutting down
+2022/03/31 18:10:55 [notice] 31#31: gracefully shutting down
+2022/03/31 18:10:55 [notice] 32#32: gracefully shutting down
+2022/03/31 18:10:55 [notice] 25#25: exiting
+2022/03/31 18:10:55 [notice] 27#27: exiting
+2022/03/31 18:10:55 [notice] 28#28: exiting
+2022/03/31 18:10:55 [notice] 22#22: exiting
+2022/03/31 18:10:55 [notice] 24#24: exit
+2022/03/31 18:10:55 [notice] 26#26: exit
+2022/03/31 18:10:55 [notice] 29#29: exiting
+2022/03/31 18:10:55 [notice] 30#30: exiting
+2022/03/31 18:10:55 [notice] 31#31: exiting
+2022/03/31 18:10:55 [notice] 32#32: exiting
+2022/03/31 18:10:55 [notice] 23#23: exit
+2022/03/31 18:10:55 [notice] 25#25: exit
+2022/03/31 18:10:55 [notice] 27#27: exit
+2022/03/31 18:10:55 [notice] 32#32: exit
+2022/03/31 18:10:55 [notice] 29#29: exit
+2022/03/31 18:10:55 [notice] 31#31: exit
+2022/03/31 18:10:55 [notice] 30#30: exit
+2022/03/31 18:10:55 [notice] 22#22: exit
+2022/03/31 18:10:55 [notice] 28#28: exit
+2022/03/31 18:10:55 [notice] 34#34: gracefully shutting down
+2022/03/31 18:10:55 [notice] 34#34: exiting
+2022/03/31 18:10:55 [notice] 37#37: gracefully shutting down
+2022/03/31 18:10:55 [notice] 33#33: gracefully shutting down
+2022/03/31 18:10:55 [notice] 37#37: exiting
+2022/03/31 18:10:55 [notice] 33#33: exiting
+2022/03/31 18:10:55 [notice] 35#35: gracefully shutting down
+2022/03/31 18:10:55 [notice] 34#34: exit
+2022/03/31 18:10:55 [notice] 37#37: exit
+2022/03/31 18:10:55 [notice] 35#35: exiting
+2022/03/31 18:10:55 [notice] 33#33: exit
+2022/03/31 18:10:55 [notice] 35#35: exit
+2022/03/31 18:10:55 [notice] 36#36: gracefully shutting down
+2022/03/31 18:10:55 [notice] 36#36: exiting
+2022/03/31 18:10:55 [notice] 36#36: exit
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/03/31 18:10:55 [notice] 1#1: worker process 26 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: worker process 30 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2022/03/31 18:10:55 [notice] 1#1: worker process 37 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/03/31 18:10:55 [notice] 1#1: worker process 27 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/03/31 18:10:55 [notice] 1#1: worker process 28 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/03/31 18:10:55 [notice] 1#1: worker process 31 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2022/03/31 18:10:55 [notice] 1#1: worker process 24 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2022/03/31 18:10:55 [notice] 1#1: worker process 23 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/03/31 18:10:55 [notice] 1#1: worker process 29 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: worker process 35 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/03/31 18:10:55 [notice] 1#1: worker process 22 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: worker process 25 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2022/03/31 18:10:55 [notice] 1#1: worker process 34 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: worker process 36 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/03/31 18:10:55 [notice] 1#1: worker process 32 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/03/31 18:10:55 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/03/31 18:10:55 [notice] 1#1: worker process 33 exited with code 0
+2022/03/31 18:10:55 [notice] 1#1: exit
+2022/03/31 18:11:19 [notice] 1#1: using the "epoll" event method
+2022/03/31 18:11:19 [notice] 1#1: nginx/1.21.6
+2022/03/31 18:11:19 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/03/31 18:11:19 [notice] 1#1: OS: Linux 5.13.0-39-generic
+2022/03/31 18:11:19 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/03/31 18:11:19 [notice] 1#1: start worker processes
+2022/03/31 18:11:19 [notice] 1#1: start worker process 23
+2022/03/31 18:11:19 [notice] 1#1: start worker process 24
+2022/03/31 18:11:19 [notice] 1#1: start worker process 25
+2022/03/31 18:11:19 [notice] 1#1: start worker process 26
+2022/03/31 18:11:19 [notice] 1#1: start worker process 27
+2022/03/31 18:11:19 [notice] 1#1: start worker process 28
+2022/03/31 18:11:19 [notice] 1#1: start worker process 29
+2022/03/31 18:11:19 [notice] 1#1: start worker process 30
+2022/03/31 18:11:19 [notice] 1#1: start worker process 31
+2022/03/31 18:11:19 [notice] 1#1: start worker process 32
+2022/03/31 18:11:19 [notice] 1#1: start worker process 33
+2022/03/31 18:11:19 [notice] 1#1: start worker process 34
+2022/03/31 18:11:19 [notice] 1#1: start worker process 35
+2022/03/31 18:11:19 [notice] 1#1: start worker process 36
+2022/03/31 18:11:19 [notice] 1#1: start worker process 37
+2022/03/31 18:11:19 [notice] 1#1: start worker process 38
+2022/04/05 03:36:33 [notice] 1#1: using the "epoll" event method
+2022/04/05 03:36:33 [notice] 1#1: nginx/1.21.6
+2022/04/05 03:36:33 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/04/05 03:36:33 [notice] 1#1: OS: Linux 5.13.0-39-generic
+2022/04/05 03:36:33 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/04/05 03:36:33 [notice] 1#1: start worker processes
+2022/04/05 03:36:33 [notice] 1#1: start worker process 22
+2022/04/05 03:36:33 [notice] 1#1: start worker process 23
+2022/04/05 03:36:33 [notice] 1#1: start worker process 24
+2022/04/05 03:36:33 [notice] 1#1: start worker process 25
+2022/04/05 03:36:33 [notice] 1#1: start worker process 26
+2022/04/05 03:36:33 [notice] 1#1: start worker process 27
+2022/04/05 03:36:33 [notice] 1#1: start worker process 28
+2022/04/05 03:36:33 [notice] 1#1: start worker process 29
+2022/04/05 03:36:33 [notice] 1#1: start worker process 30
+2022/04/05 03:36:33 [notice] 1#1: start worker process 31
+2022/04/05 03:36:33 [notice] 1#1: start worker process 32
+2022/04/05 03:36:33 [notice] 1#1: start worker process 33
+2022/04/05 03:36:33 [notice] 1#1: start worker process 34
+2022/04/05 03:36:33 [notice] 1#1: start worker process 35
+2022/04/05 03:36:33 [notice] 1#1: start worker process 36
+2022/04/05 03:36:33 [notice] 1#1: start worker process 37
+2022/04/06 04:16:57 [notice] 1#1: using the "epoll" event method
+2022/04/06 04:16:57 [notice] 1#1: nginx/1.21.6
+2022/04/06 04:16:57 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/04/06 04:16:57 [notice] 1#1: OS: Linux 5.13.0-39-generic
+2022/04/06 04:16:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/04/06 04:16:57 [notice] 1#1: start worker processes
+2022/04/06 04:16:57 [notice] 1#1: start worker process 22
+2022/04/06 04:16:57 [notice] 1#1: start worker process 23
+2022/04/06 04:16:57 [notice] 1#1: start worker process 24
+2022/04/06 04:16:57 [notice] 1#1: start worker process 25
+2022/04/06 04:16:57 [notice] 1#1: start worker process 26
+2022/04/06 04:16:57 [notice] 1#1: start worker process 27
+2022/04/06 04:16:57 [notice] 1#1: start worker process 28
+2022/04/06 04:16:57 [notice] 1#1: start worker process 29
+2022/04/06 04:16:57 [notice] 1#1: start worker process 30
+2022/04/06 04:16:57 [notice] 1#1: start worker process 31
+2022/04/06 04:16:57 [notice] 1#1: start worker process 32
+2022/04/06 04:16:57 [notice] 1#1: start worker process 33
+2022/04/06 04:16:57 [notice] 1#1: start worker process 34
+2022/04/06 04:16:57 [notice] 1#1: start worker process 35
+2022/04/06 04:16:57 [notice] 1#1: start worker process 36
+2022/04/06 04:16:57 [notice] 1#1: start worker process 37
+2022/04/06 04:16:58 [error] 22#22: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: _, request: "GET / HTTP/1.0", upstream: "fastcgi://172.19.0.4:9000", host: "support.jbnuu.uz"
+2022/04/06 04:21:03 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/04/06 04:21:03 [notice] 24#24: gracefully shutting down
+2022/04/06 04:21:03 [notice] 22#22: gracefully shutting down
+2022/04/06 04:21:03 [notice] 23#23: gracefully shutting down
+2022/04/06 04:21:03 [notice] 26#26: gracefully shutting down
+2022/04/06 04:21:03 [notice] 25#25: gracefully shutting down
+2022/04/06 04:21:03 [notice] 24#24: exiting
+2022/04/06 04:21:03 [notice] 27#27: gracefully shutting down
+2022/04/06 04:21:03 [notice] 22#22: exiting
+2022/04/06 04:21:03 [notice] 28#28: gracefully shutting down
+2022/04/06 04:21:03 [notice] 30#30: gracefully shutting down
+2022/04/06 04:21:03 [notice] 31#31: gracefully shutting down
+2022/04/06 04:21:03 [notice] 23#23: exiting
+2022/04/06 04:21:03 [notice] 26#26: exiting
+2022/04/06 04:21:03 [notice] 30#30: exiting
+2022/04/06 04:21:03 [notice] 32#32: gracefully shutting down
+2022/04/06 04:21:03 [notice] 29#29: gracefully shutting down
+2022/04/06 04:21:03 [notice] 25#25: exiting
+2022/04/06 04:21:03 [notice] 34#34: gracefully shutting down
+2022/04/06 04:21:03 [notice] 27#27: exiting
+2022/04/06 04:21:03 [notice] 28#28: exiting
+2022/04/06 04:21:03 [notice] 31#31: exiting
+2022/04/06 04:21:03 [notice] 33#33: gracefully shutting down
+2022/04/06 04:21:03 [notice] 24#24: exit
+2022/04/06 04:21:03 [notice] 35#35: gracefully shutting down
+2022/04/06 04:21:03 [notice] 22#22: exit
+2022/04/06 04:21:03 [notice] 32#32: exiting
+2022/04/06 04:21:03 [notice] 29#29: exiting
+2022/04/06 04:21:03 [notice] 30#30: exit
+2022/04/06 04:21:03 [notice] 26#26: exit
+2022/04/06 04:21:03 [notice] 34#34: exiting
+2022/04/06 04:21:03 [notice] 33#33: exiting
+2022/04/06 04:21:03 [notice] 35#35: exiting
+2022/04/06 04:21:03 [notice] 31#31: exit
+2022/04/06 04:21:03 [notice] 23#23: exit
+2022/04/06 04:21:03 [notice] 28#28: exit
+2022/04/06 04:21:03 [notice] 25#25: exit
+2022/04/06 04:21:03 [notice] 29#29: exit
+2022/04/06 04:21:03 [notice] 32#32: exit
+2022/04/06 04:21:03 [notice] 34#34: exit
+2022/04/06 04:21:03 [notice] 27#27: exit
+2022/04/06 04:21:03 [notice] 35#35: exit
+2022/04/06 04:21:03 [notice] 33#33: exit
+2022/04/06 04:21:03 [notice] 36#36: gracefully shutting down
+2022/04/06 04:21:03 [notice] 36#36: exiting
+2022/04/06 04:21:03 [notice] 36#36: exit
+2022/04/06 04:21:03 [notice] 37#37: gracefully shutting down
+2022/04/06 04:21:03 [notice] 37#37: exiting
+2022/04/06 04:21:03 [notice] 37#37: exit
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2022/04/06 04:21:03 [notice] 1#1: worker process 22 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2022/04/06 04:21:03 [notice] 1#1: worker process 31 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: worker process 37 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2022/04/06 04:21:03 [notice] 1#1: worker process 36 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: worker process 27 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/04/06 04:21:03 [notice] 1#1: worker process 25 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/04/06 04:21:03 [notice] 1#1: worker process 34 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/04/06 04:21:03 [notice] 1#1: worker process 30 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2022/04/06 04:21:03 [notice] 1#1: worker process 23 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2022/04/06 04:21:03 [notice] 1#1: worker process 26 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/04/06 04:21:03 [notice] 1#1: worker process 33 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2022/04/06 04:21:03 [notice] 1#1: worker process 24 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/04/06 04:21:03 [notice] 1#1: worker process 28 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/04/06 04:21:03 [notice] 1#1: worker process 32 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/04/06 04:21:03 [notice] 1#1: worker process 35 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/06 04:21:03 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/04/06 04:21:03 [notice] 1#1: worker process 29 exited with code 0
+2022/04/06 04:21:03 [notice] 1#1: exit
+2022/04/06 04:31:24 [notice] 1#1: using the "epoll" event method
+2022/04/06 04:31:24 [notice] 1#1: nginx/1.21.6
+2022/04/06 04:31:24 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/04/06 04:31:24 [notice] 1#1: OS: Linux 5.13.0-39-generic
+2022/04/06 04:31:24 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/04/06 04:31:24 [notice] 1#1: start worker processes
+2022/04/06 04:31:24 [notice] 1#1: start worker process 22
+2022/04/06 04:31:24 [notice] 1#1: start worker process 23
+2022/04/06 04:31:24 [notice] 1#1: start worker process 24
+2022/04/06 04:31:24 [notice] 1#1: start worker process 25
+2022/04/06 04:31:24 [notice] 1#1: start worker process 26
+2022/04/06 04:31:24 [notice] 1#1: start worker process 27
+2022/04/06 04:31:24 [notice] 1#1: start worker process 28
+2022/04/06 04:31:24 [notice] 1#1: start worker process 29
+2022/04/06 04:31:24 [notice] 1#1: start worker process 30
+2022/04/06 04:31:24 [notice] 1#1: start worker process 31
+2022/04/06 04:31:24 [notice] 1#1: start worker process 32
+2022/04/06 04:31:24 [notice] 1#1: start worker process 33
+2022/04/06 04:31:24 [notice] 1#1: start worker process 34
+2022/04/06 04:31:24 [notice] 1#1: start worker process 35
+2022/04/06 04:31:24 [notice] 1#1: start worker process 36
+2022/04/06 04:31:24 [notice] 1#1: start worker process 37
+2022/04/07 13:37:50 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/04/07 13:37:50 [notice] 22#22: gracefully shutting down
+2022/04/07 13:37:50 [notice] 23#23: gracefully shutting down
+2022/04/07 13:37:50 [notice] 24#24: gracefully shutting down
+2022/04/07 13:37:50 [notice] 26#26: gracefully shutting down
+2022/04/07 13:37:50 [notice] 25#25: gracefully shutting down
+2022/04/07 13:37:50 [notice] 28#28: gracefully shutting down
+2022/04/07 13:37:50 [notice] 22#22: exiting
+2022/04/07 13:37:50 [notice] 23#23: exiting
+2022/04/07 13:37:50 [notice] 27#27: gracefully shutting down
+2022/04/07 13:37:50 [notice] 26#26: exiting
+2022/04/07 13:37:50 [notice] 24#24: exiting
+2022/04/07 13:37:50 [notice] 30#30: gracefully shutting down
+2022/04/07 13:37:50 [notice] 29#29: gracefully shutting down
+2022/04/07 13:37:50 [notice] 32#32: gracefully shutting down
+2022/04/07 13:37:50 [notice] 25#25: exiting
+2022/04/07 13:37:50 [notice] 28#28: exiting
+2022/04/07 13:37:50 [notice] 31#31: gracefully shutting down
+2022/04/07 13:37:50 [notice] 33#33: gracefully shutting down
+2022/04/07 13:37:50 [notice] 34#34: gracefully shutting down
+2022/04/07 13:37:50 [notice] 27#27: exiting
+2022/04/07 13:37:50 [notice] 30#30: exiting
+2022/04/07 13:37:50 [notice] 26#26: exit
+2022/04/07 13:37:50 [notice] 32#32: exiting
+2022/04/07 13:37:50 [notice] 33#33: exiting
+2022/04/07 13:37:50 [notice] 29#29: exiting
+2022/04/07 13:37:50 [notice] 22#22: exit
+2022/04/07 13:37:50 [notice] 36#36: gracefully shutting down
+2022/04/07 13:37:50 [notice] 23#23: exit
+2022/04/07 13:37:50 [notice] 28#28: exit
+2022/04/07 13:37:50 [notice] 31#31: exiting
+2022/04/07 13:37:50 [notice] 34#34: exiting
+2022/04/07 13:37:50 [notice] 24#24: exit
+2022/04/07 13:37:50 [notice] 32#32: exit
+2022/04/07 13:37:50 [notice] 30#30: exit
+2022/04/07 13:37:50 [notice] 25#25: exit
+2022/04/07 13:37:50 [notice] 33#33: exit
+2022/04/07 13:37:50 [notice] 36#36: exiting
+2022/04/07 13:37:50 [notice] 27#27: exit
+2022/04/07 13:37:50 [notice] 29#29: exit
+2022/04/07 13:37:50 [notice] 34#34: exit
+2022/04/07 13:37:50 [notice] 31#31: exit
+2022/04/07 13:37:50 [notice] 36#36: exit
+2022/04/07 13:37:50 [notice] 35#35: gracefully shutting down
+2022/04/07 13:37:50 [notice] 35#35: exiting
+2022/04/07 13:37:50 [notice] 35#35: exit
+2022/04/07 13:37:50 [notice] 37#37: gracefully shutting down
+2022/04/07 13:37:50 [notice] 37#37: exiting
+2022/04/07 13:37:50 [notice] 37#37: exit
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/04/07 13:37:50 [notice] 1#1: worker process 29 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: worker process 24 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: worker process 25 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: worker process 36 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/04/07 13:37:50 [notice] 1#1: worker process 33 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2022/04/07 13:37:50 [notice] 1#1: worker process 26 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: worker process 34 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/04/07 13:37:50 [notice] 1#1: worker process 28 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2022/04/07 13:37:50 [notice] 1#1: worker process 37 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: worker process 31 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/04/07 13:37:50 [notice] 1#1: worker process 32 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: worker process 30 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/04/07 13:37:50 [notice] 1#1: worker process 35 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/04/07 13:37:50 [notice] 1#1: worker process 27 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2022/04/07 13:37:50 [notice] 1#1: worker process 22 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/07 13:37:50 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2022/04/07 13:37:50 [notice] 1#1: worker process 23 exited with code 0
+2022/04/07 13:37:50 [notice] 1#1: exit
+2022/04/07 13:38:15 [notice] 1#1: using the "epoll" event method
+2022/04/07 13:38:15 [notice] 1#1: nginx/1.21.6
+2022/04/07 13:38:15 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/04/07 13:38:15 [notice] 1#1: OS: Linux 5.13.0-39-generic
+2022/04/07 13:38:15 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/04/07 13:38:15 [notice] 1#1: start worker processes
+2022/04/07 13:38:15 [notice] 1#1: start worker process 22
+2022/04/07 13:38:15 [notice] 1#1: start worker process 23
+2022/04/07 13:38:15 [notice] 1#1: start worker process 24
+2022/04/07 13:38:15 [notice] 1#1: start worker process 25
+2022/04/07 13:38:15 [notice] 1#1: start worker process 26
+2022/04/07 13:38:15 [notice] 1#1: start worker process 27
+2022/04/07 13:38:15 [notice] 1#1: start worker process 28
+2022/04/07 13:38:15 [notice] 1#1: start worker process 29
+2022/04/07 13:38:15 [notice] 1#1: start worker process 30
+2022/04/07 13:38:15 [notice] 1#1: start worker process 31
+2022/04/07 13:38:15 [notice] 1#1: start worker process 32
+2022/04/07 13:38:15 [notice] 1#1: start worker process 33
+2022/04/07 13:38:15 [notice] 1#1: start worker process 34
+2022/04/07 13:38:15 [notice] 1#1: start worker process 35
+2022/04/07 13:38:15 [notice] 1#1: start worker process 36
+2022/04/07 13:38:15 [notice] 1#1: start worker process 37
+2022/04/08 04:55:01 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/04/08 04:55:01 [notice] 22#22: gracefully shutting down
+2022/04/08 04:55:01 [notice] 23#23: gracefully shutting down
+2022/04/08 04:55:01 [notice] 24#24: gracefully shutting down
+2022/04/08 04:55:01 [notice] 22#22: exiting
+2022/04/08 04:55:01 [notice] 26#26: gracefully shutting down
+2022/04/08 04:55:01 [notice] 23#23: exiting
+2022/04/08 04:55:01 [notice] 24#24: exiting
+2022/04/08 04:55:01 [notice] 25#25: gracefully shutting down
+2022/04/08 04:55:01 [notice] 26#26: exiting
+2022/04/08 04:55:01 [notice] 22#22: exit
+2022/04/08 04:55:01 [notice] 27#27: gracefully shutting down
+2022/04/08 04:55:01 [notice] 29#29: gracefully shutting down
+2022/04/08 04:55:01 [notice] 28#28: gracefully shutting down
+2022/04/08 04:55:01 [notice] 30#30: gracefully shutting down
+2022/04/08 04:55:01 [notice] 24#24: exit
+2022/04/08 04:55:01 [notice] 25#25: exiting
+2022/04/08 04:55:01 [notice] 23#23: exit
+2022/04/08 04:55:01 [notice] 33#33: gracefully shutting down
+2022/04/08 04:55:01 [notice] 29#29: exiting
+2022/04/08 04:55:01 [notice] 31#31: gracefully shutting down
+2022/04/08 04:55:01 [notice] 27#27: exiting
+2022/04/08 04:55:01 [notice] 32#32: gracefully shutting down
+2022/04/08 04:55:01 [notice] 26#26: exit
+2022/04/08 04:55:01 [notice] 30#30: exiting
+2022/04/08 04:55:01 [notice] 28#28: exiting
+2022/04/08 04:55:01 [notice] 33#33: exiting
+2022/04/08 04:55:01 [notice] 31#31: exiting
+2022/04/08 04:55:01 [notice] 29#29: exit
+2022/04/08 04:55:01 [notice] 34#34: gracefully shutting down
+2022/04/08 04:55:01 [notice] 32#32: exiting
+2022/04/08 04:55:01 [notice] 30#30: exit
+2022/04/08 04:55:01 [notice] 33#33: exit
+2022/04/08 04:55:01 [notice] 25#25: exit
+2022/04/08 04:55:01 [notice] 34#34: exiting
+2022/04/08 04:55:01 [notice] 27#27: exit
+2022/04/08 04:55:01 [notice] 31#31: exit
+2022/04/08 04:55:01 [notice] 28#28: exit
+2022/04/08 04:55:01 [notice] 32#32: exit
+2022/04/08 04:55:01 [notice] 34#34: exit
+2022/04/08 04:55:01 [notice] 36#36: gracefully shutting down
+2022/04/08 04:55:01 [notice] 35#35: gracefully shutting down
+2022/04/08 04:55:01 [notice] 37#37: gracefully shutting down
+2022/04/08 04:55:01 [notice] 36#36: exiting
+2022/04/08 04:55:01 [notice] 35#35: exiting
+2022/04/08 04:55:01 [notice] 37#37: exiting
+2022/04/08 04:55:01 [notice] 35#35: exit
+2022/04/08 04:55:01 [notice] 37#37: exit
+2022/04/08 04:55:01 [notice] 36#36: exit
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/04/08 04:55:01 [notice] 1#1: worker process 32 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: worker process 33 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/04/08 04:55:01 [notice] 1#1: worker process 27 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/04/08 04:55:01 [notice] 1#1: worker process 29 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2022/04/08 04:55:01 [notice] 1#1: worker process 24 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: worker process 37 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/04/08 04:55:01 [notice] 1#1: worker process 26 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: worker process 30 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/04/08 04:55:01 [notice] 1#1: worker process 22 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: worker process 34 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: worker process 35 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/04/08 04:55:01 [notice] 1#1: worker process 28 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/04/08 04:55:01 [notice] 1#1: worker process 23 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: worker process 25 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: worker process 31 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/04/08 04:55:01 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2022/04/08 04:55:01 [notice] 1#1: worker process 36 exited with code 0
+2022/04/08 04:55:01 [notice] 1#1: exit
+2022/04/08 04:55:02 [notice] 1#1: using the "epoll" event method
+2022/04/08 04:55:02 [notice] 1#1: nginx/1.21.6
+2022/04/08 04:55:02 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/04/08 04:55:02 [notice] 1#1: OS: Linux 5.13.0-39-generic
+2022/04/08 04:55:02 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/04/08 04:55:02 [notice] 1#1: start worker processes
+2022/04/08 04:55:02 [notice] 1#1: start worker process 22
+2022/04/08 04:55:02 [notice] 1#1: start worker process 23
+2022/04/08 04:55:02 [notice] 1#1: start worker process 24
+2022/04/08 04:55:02 [notice] 1#1: start worker process 25
+2022/04/08 04:55:02 [notice] 1#1: start worker process 26
+2022/04/08 04:55:02 [notice] 1#1: start worker process 27
+2022/04/08 04:55:02 [notice] 1#1: start worker process 28
+2022/04/08 04:55:02 [notice] 1#1: start worker process 29
+2022/04/08 04:55:02 [notice] 1#1: start worker process 30
+2022/04/08 04:55:02 [notice] 1#1: start worker process 31
+2022/04/08 04:55:02 [notice] 1#1: start worker process 32
+2022/04/08 04:55:02 [notice] 1#1: start worker process 33
+2022/04/08 04:55:02 [notice] 1#1: start worker process 34
+2022/04/08 04:55:02 [notice] 1#1: start worker process 35
+2022/04/08 04:55:02 [notice] 1#1: start worker process 36
+2022/04/08 04:55:02 [notice] 1#1: start worker process 37
