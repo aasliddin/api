@@ -58,8 +58,22 @@ class UserController extends Controller
                 'msg'=> "email alridy "
             ], 422);        
         }
+        $name='';
+        if(!empty($request->photo)){
+            $name=  time().".".$request->photo->extension();
+            $a =  $request->photo->move(public_path('uploads/'), $name);
+            $name="uploads/".$name;
+        }
+       
         $data = [
             "name" => $request->name,
+            "fam" => $request->fam,
+            "sh" => $request->sh,
+            "phone" => $request->phone,
+            "bolim_id" => $request->bolim_id,
+            "lavozim" => $request->lavozim,
+            "photo" => $name,
+            "role" => $request->role??"1",
             "email" => $request->email,
         ];
         // return $data;

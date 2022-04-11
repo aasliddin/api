@@ -16,7 +16,7 @@ class CreateBolimsTable extends Migration
         Schema::create('bolims', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('b_id')->default(0);
+            $table->integer('bolim_id')->default(0);
             $table->timestamps();
         });
     }

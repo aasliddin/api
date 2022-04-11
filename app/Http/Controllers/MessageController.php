@@ -11,12 +11,12 @@ class MessageController extends Controller
     {
         if(Auth::user()->role==1)
             {
-                $mes=Messages::where('user_id',Auth::user()->id)->with('reyting')->with('manager')->get();
+                $mes=Messages::where('user_id',Auth::user()->id)->with('worker')->get();
                 return response()->json(
                     $mes
                 , 200);
             }
-        $mes=Messages::with('user')->with('reyting')->with('manager.user')->get();
+        $mes=Messages::with('user')->with('worker')->get();
         return response()->json(
             $mes
         , 200);
@@ -25,7 +25,7 @@ class MessageController extends Controller
 
     public function createMessage(Request $request)
     {
-        if(empty($request->text)){
+        if(empty($request->text) and empty($request->title)){
             return response()->json([
                 'msg'=> "Text empty"
             ], 422);        
@@ -37,6 +37,7 @@ class MessageController extends Controller
         }
         return Messages::create(
             [
+                'title'=>$request->title,
                 'text'=>$request->text,
                 'user_id'=>Auth::user()->id
             ]
@@ -44,7 +45,7 @@ class MessageController extends Controller
     }
     public function updateMessage(Request $request)
     {
-        if(empty($request->text)){
+        if(empty($request->text) and empty($request->title)){
             return response()->json([
                 'msg'=> "Text empty"
             ], 422);        
@@ -61,6 +62,7 @@ class MessageController extends Controller
         }
         if(Messages::find($request->id)->update(
             [
+                'title'=>$request->title,
                 'text'=>$request->text,
                 'user_id'=>Auth::user()->id
             ]
@@ -69,5 +71,21 @@ class MessageController extends Controller
         return  response()->json([
             'msg'=> "xato"
         ], 422);  
+    }
+    public function activeMessage(Request $request)
+    {
+        if(empty($request->message_id)){
+            return response()->json([
+                'msg'=> " id empty"
+            ], 422);        
+        }
+        if(Messages::find($request->message_id)->update(
+            [
+                'worker_id'=>Auth::user()->id
+            ]
+            ))
+            return  response()->json('succes', 200);   
+            return  response()->json('error', 422);   
+
     }
 }

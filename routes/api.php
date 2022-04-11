@@ -3,7 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
-use App\Http\Controllers\StatusController;
+use App\Http\Controllers\BolimController;
+use App\Http\Controllers\ChatsController;
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -24,13 +25,21 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::get('/', [MessageController::class,'getMessage']);
         Route::post('/create', [MessageController::class,'createMessage']);
         Route::post('/update', [MessageController::class,'updateMessage']);
-        Route::post('/bajardi', [MessageController::class,'updateMessage']);
+        Route::post('/active', [MessageController::class,'activeMessage']);
     });
-    Route::prefix('/status')
+    Route::prefix('/chat')
     ->group(function () {
-        Route::post('/create', [StatusController::class,'createStatus']);
-        Route::post('/update', [StatusController::class,'updateStatus']);
+        Route::get('/{id}', [ChatsController::class,'getChat']);
+        Route::post('/create', [ChatsController::class,'createChat']);
+        Route::post('/update', [ChatsController::class,'updateChat']);
     });
+    Route::prefix('/bolim')
+    ->group(function () {
+        Route::get('/{id}', [BolimController::class,'getBolim']);
+        Route::post('/create', [BolimController::class,'createBolim']);
+        Route::post('/update', [BolimController::class,'updateBolim']);
+    });
+  
 });
 
 Route::any("login",[UserController::class,'index'])->name('login');;
