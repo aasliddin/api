@@ -65,6 +65,12 @@ class UsersTableSeeder extends Seeder
                 'bolim_id'=>2
             ]);
         }
+        foreach($kaf as $b){
+            DB::table('bolims')->insert([
+                'name' => $b,
+                'bolim_id'=>3
+            ]);
+        }
         
         DB::table('users')->insert([
             'name' => 'Asliddin',
