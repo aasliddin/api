@@ -12,9 +12,7 @@ class Bolim extends Model
         'name',
         'b_id',
     ];
-    public function child(){
-        return $this->belongsTo("App\Models\Bolim",'id');
-    }
+    
    
     
 }

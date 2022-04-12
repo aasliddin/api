@@ -47,4 +47,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function bolim(){
+        return $this->belongsTo("App\Models\Bolim",'bolim_id');
+    }
 }

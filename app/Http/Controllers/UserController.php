@@ -48,7 +48,8 @@ class UserController extends Controller
                 'msg'=> "Name 3tadan kam belgi"
             ], 422);        
         }
-        if(empty($request->email) and end(explode('@',$request->email))=='jbnuu.uz'){
+        $q=  explode('@',$request->email);
+        if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
             return response()->json([
                 'msg'=> "email xato"
             ], 422);        
