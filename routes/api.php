@@ -33,14 +33,14 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::post('/create', [ChatsController::class,'createChat']);
         Route::post('/update', [ChatsController::class,'updateChat']);
     });
-    Route::prefix('/bolim')
+    
+  
+});
+Route::prefix('/bolim')
     ->group(function () {
         Route::get('/{id}', [BolimController::class,'getBolim']);
         Route::post('/create', [BolimController::class,'createBolim']);
         Route::post('/update', [BolimController::class,'updateBolim']);
     });
-  
-});
-
 Route::any("login",[UserController::class,'index'])->name('login');;
 Route::any("register",[UserController::class,'register'])->name('register');;

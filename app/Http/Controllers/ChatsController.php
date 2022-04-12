@@ -36,7 +36,7 @@ class ChatsController extends Controller
     }
     public function updateChat(Request $request)
     {
-        if(empty($request->message_id) and empty($request->text)){
+        if(empty($request->id) and empty($request->text)){
             return response()->json([
                 'msg'=> " id empty"
             ], 422);        
