@@ -48,14 +48,14 @@ class UserController extends Controller
                 'msg'=> "Name 3tadan kam belgi"
             ], 422);        
         }
-        if(empty($request->email)){
+        if(empty($request->email) and end(explode('@',$request->email))=='jbnuu.uz'){
             return response()->json([
-                'msg'=> "email empty"
+                'msg'=> "email xato"
             ], 422);        
         }
         if(!empty(User::where('email',$request->email)->first())){
             return response()->json([
-                'msg'=> "email alridy "
+                'msg'=> "email allaqachon ro'yxattan o'tgan "
             ], 422);        
         }
         $name='';

@@ -17,7 +17,7 @@ class ChatsController extends Controller
             ], 422);        
         }
         return response()->json(
-            Chats::where('message_id',$id)->get()
+            Chats::where('message_id',$id)->with('user')->get()
         , 200);  
     }
     public function createChat(Request $request)
