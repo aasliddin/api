@@ -81,7 +81,8 @@ class MessageController extends Controller
         }
         if(Messages::find($request->message_id)->update(
             [
-                'worker_id'=>Auth::user()->id
+                'worker_id'=>Auth::user()->id,
+                'status'=>'1'
             ]
             ))
             return  response()->json('succes', 200);   
