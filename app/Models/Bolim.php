@@ -10,7 +10,7 @@ class Bolim extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'b_id',
+        'bolim_id',
     ];
     
    
