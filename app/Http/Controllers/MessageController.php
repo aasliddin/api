@@ -79,14 +79,16 @@ class MessageController extends Controller
                 'msg'=> " id empty"
             ], 422);        
         }
+        if(Messages::find($request->message_id)->worker_id>0)
         if(Messages::find($request->message_id)->update(
             [
                 'worker_id'=>Auth::user()->id,
                 'status'=>'1'
             ]
             ))
-            return  response()->json('succes', 200);   
-            return  response()->json('error', 422);   
+            return  response()->json('succes', 200);  
+
+            return  response()->json('Allaqachon olib bo\'lingan', 422);   
 
     }
 }
