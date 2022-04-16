@@ -11,18 +11,33 @@ class MessageController extends Controller
     {
         if(Auth::user()->role==1)
             {
-                $mes=Messages::where('user_id',Auth::user()->id)->with('worker')->with('user')->get();
+                $mes=Messages::where('user_id',Auth::user()->id)->with('worker.bolim')->with('user.bolim')->get();
                 return response()->json(
                     $mes
                 , 200);
             }
-        $mes=Messages::with('user')->with('worker')->get();
+        $mes=Messages::with('user.bolim')->with('worker.bolim')->get();
         return response()->json(
             $mes
         , 200);
 
     }
 
+    public function gettMessage($id)
+    {
+        if(Auth::user()->role==1)
+            {
+                $mes=Messages::where('user_id',Auth::user()->id)->where('status',$id)->with('worker.bolim')->with('user.bolim')->get();
+                return response()->json(
+                    $mes
+                , 200);
+            }
+        $mes=Messages::with('user.bolim')->where('status',$id)->with('worker.bolim')->get();
+        return response()->json(
+            $mes
+        , 200);
+
+    }
     public function createMessage(Request $request)
     {
         if(empty($request->text) and empty($request->title)){
@@ -64,7 +79,6 @@ class MessageController extends Controller
             [
                 'title'=>$request->title,
                 'text'=>$request->text,
-                'user_id'=>Auth::user()->id
             ]
         ))
         return Messages::find($request->id);
@@ -79,7 +93,7 @@ class MessageController extends Controller
                 'msg'=> " id empty"
             ], 422);        
         }
-        if(Messages::find($request->message_id)->worker_id>0)
+        if(empty(Messages::find($request->message_id)->worker_id))
         if(Messages::find($request->message_id)->update(
             [
                 'worker_id'=>Auth::user()->id,

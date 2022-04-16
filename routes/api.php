@@ -23,6 +23,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::prefix('/message')
     ->group(function () {
         Route::get('/', [MessageController::class,'getMessage']);
+        Route::get('/{id}', [MessageController::class,'gettMessage']);
         Route::post('/create', [MessageController::class,'createMessage']);
         Route::post('/update', [MessageController::class,'updateMessage']);
         Route::post('/active', [MessageController::class,'activeMessage']);
