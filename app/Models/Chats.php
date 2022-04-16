@@ -10,6 +10,7 @@ class Chats extends Model
     use HasFactory;
     protected $fillable = [
         'text',
+        'file',
         'user_id',
         'message_id',
     ];

@@ -16,6 +16,7 @@ class ChatsController extends Controller
                 'msg'=> " id empty"
             ], 422);        
         }
+        
         return response()->json(
             Chats::where('message_id',$id)->with('user.bolim')->get()
         , 200);  
@@ -27,9 +28,16 @@ class ChatsController extends Controller
                 'msg'=> " id empty"
             ], 422);        
         }
+        $name="";
+        if(!empty($request->photo)){
+            $name=  time().".".$request->photo->extension();
+            $a =  $request->photo->move(public_path('chat/'), $name);
+            $name="chat/".$name;
+        }
         return Chats::create([
             'text'=>$request->text,
             'message_id'=>$request->message_id,
+            'file'=>$name,
             'user_id'=>Auth::user()->id
         ]);
 
