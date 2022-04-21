@@ -23,7 +23,7 @@ class Messages extends Model
         return $this->belongsTo("App\Models\User",'worker_id');
     }
     public function chat(){
-        return $this->hasMany("App\Models\Chats",'message_id');
+        return $this->hasMany("App\Models\Chats",'message_id')->where('chats.view', '=', '0');
     }
     
 }

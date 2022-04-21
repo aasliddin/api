@@ -18,6 +18,8 @@ class CreateMessagesTable extends Migration
             $table->text('text');
             $table->string('title');
             $table->integer('status')->default(0);
+            $table->string('izoh')->default('');
+            $table->string('img')->default("");
             $table->integer('ball')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('worker_id')->nullable();

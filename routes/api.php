@@ -31,11 +31,12 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::prefix('/chat')
     ->group(function () {
         Route::get('/{id}', [ChatsController::class,'getChat']);
+        Route::get('/active/{id}', [ChatsController::class,'active']);
         Route::post('/create', [ChatsController::class,'createChat']);
         Route::post('/update', [ChatsController::class,'updateChat']);
     });
     
-  
+//   /*  */
 });
 Route::prefix('/bolim')
     ->group(function () {

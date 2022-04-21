@@ -17,6 +17,7 @@ class CreateChatsTable extends Migration
             $table->id();
             $table->string('file')->default('');
             $table->text('text');
+            $table->string('view')->default('0');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('message_id');
             $table->timestamps();

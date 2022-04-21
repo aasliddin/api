@@ -49,12 +49,28 @@ class ChatsController extends Controller
                 'msg'=> " id empty"
             ], 422);        
         }
+        $name="";
+        if(!empty($request->photo)){
+            unlink(public_path(Chats::find($request->id)->file));
+            $name=  time().".".$request->photo->extension();
+            $a =  $request->photo->move(public_path('chat/'), $name);
+            $name="chat/".$name;
+        }
         return Chats::find($request->id)->update(
             [
                 'text'=>$request->text,
+                'file'=>$name,
             ]
             );
         
 
+    }
+    public function active($id)
+    {
+        return Chats::find($id)->update(
+            [
+                'view'=>1
+            ]
+            );
     }
 }

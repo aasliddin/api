@@ -11,6 +11,7 @@ class Chats extends Model
     protected $fillable = [
         'text',
         'file',
+        'view',
         'user_id',
         'message_id',
     ];
