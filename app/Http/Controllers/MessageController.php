@@ -25,13 +25,20 @@ class MessageController extends Controller
 
     public function gettMessage($id)
     {
-        if(Auth::user()->role<3)
+        if(Auth::user()->role==1)
             {
                 $mes=Messages::where('user_id',Auth::user()->id)->where('status',$id)->with('worker.bolim')->with('user.bolim')->withCount('chat')->get();
                 return response()->json(
                     $mes
                 , 200);
             }
+        if(Auth::user()->role==2)
+        {
+            $mes=Messages::where('worker_id',Auth::user()->id)->where('status',$id)->with('worker.bolim')->with('user.bolim')->withCount('chat')->get();
+            return response()->json(
+                $mes
+            , 200);
+        }
         $mes=Messages::with('user.bolim')->where('status',$id)->with('worker.bolim')->with('user.bolim')->withCount('chat')->get();
         return response()->json(
             $mes
