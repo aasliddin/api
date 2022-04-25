@@ -27,6 +27,8 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::post('/create', [MessageController::class,'createMessage']);
         Route::post('/update', [MessageController::class,'updateMessage']);
         Route::post('/active', [MessageController::class,'activeMessage']);
+        Route::post('/ball', [MessageController::class,'ball']);
+
     });
     Route::prefix('/chat')
     ->group(function () {
@@ -34,7 +36,6 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
         Route::get('/active/{id}', [ChatsController::class,'active']);
         Route::post('/create', [ChatsController::class,'createChat']);
         Route::post('/update', [ChatsController::class,'updateChat']);
-        Route::post('/ball', [ChatsController::class,'ball']);
     });
     
 //   /*  */
