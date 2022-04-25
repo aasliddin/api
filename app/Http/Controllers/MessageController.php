@@ -125,7 +125,7 @@ class MessageController extends Controller
             return  response()->json('Allaqachon olib bo\'lingan', 422);   
 
     }
-    public function ball()
+    public function ball(Request $request)
     {
         if(empty($request->id) and empty($request->text) and empty($request->ball)){
             return response()->json([
