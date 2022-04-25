@@ -67,7 +67,7 @@ class ChatsController extends Controller
     }
     public function active($id)
     {
-        return Chats::find($id)->update(
+        return Chats::where('message_id',$id)->update(
             [
                 'view'=>1
             ]
