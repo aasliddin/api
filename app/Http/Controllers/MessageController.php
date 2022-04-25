@@ -60,14 +60,14 @@ class MessageController extends Controller
         $name="";
         if(!empty($request->photo)){
             $name=  time().".".$request->photo->extension();
-            $a =  $request->photo->move(public_path('meassage/'), $name);
-            $name="meassage/".$name;
+            $a =  $request->photo->move(public_path('message/'), $name);
+            $name="message/".$name;
         }
         return Messages::create(
             [
                 'title'=>$request->title,
                 'text'=>$request->text,
-                'url'=>$name,
+                'img'=>$name,
                 'user_id'=>Auth::user()->id
             ]
         );

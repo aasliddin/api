@@ -13,6 +13,7 @@ class Messages extends Model
         'text',
         'title',
         'user_id',
+        'img',
         'worker_id',
         'status',
         'ball',
