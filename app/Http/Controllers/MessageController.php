@@ -34,6 +34,12 @@ class MessageController extends Controller
             }
         if(Auth::user()->role==2)
         {
+            if($id==0){
+                $mes=Messages::with('user.bolim')->where('status',$id)->with('worker.bolim')->with('user.bolim')->withCount('chat')->get();
+                return response()->json(
+                    $mes
+                , 200);
+            }
             $mes=Messages::where('worker_id',Auth::user()->id)->where('status',$id)->with('worker.bolim')->with('user.bolim')->withCount('chat')->get();
             return response()->json(
                 $mes
