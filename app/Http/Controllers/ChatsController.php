@@ -67,10 +67,18 @@ class ChatsController extends Controller
     }
     public function active($id)
     {
-        return Chats::where('message_id',$id)->update(
+        $a= Chats::where('message_id',$id)->where('user_id','!=',Auth::user()->id)->update(
             [
                 'view'=>1
             ]
             );
+            if($a){
+                return response()->json([
+                    "succes"
+                ], 200);    
+            }
+            return response()->json([
+                "error"
+            ], 422);   
     }
 }

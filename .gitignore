@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/message
+/public/chat
 /storage/*.key
 /vendor
 .env
