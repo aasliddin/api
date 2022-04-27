@@ -132,7 +132,7 @@ class UserController extends Controller
             }
             else{
                 return response()->json(
-                    'error password'
+                    ['password'=>'error password']
                 , 422); 
             }
         }
