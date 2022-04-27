@@ -139,7 +139,7 @@ class UserController extends Controller
         $user = User::find(Auth::user()->id)->update($data);
         if($user){
             return response()->json(
-                'succes'
+                ['succes'=>"ok"]
             , 200); 
         }
         return response()->json(
