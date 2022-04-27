@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 Route::group(['middleware' => 'auth:sanctum'], function(){
+    Route::post("update",[UserController::class,'update'])->name('update');
+
     Route::post('/logout', [UserController::class, 'logout']);
     Route::prefix('/message')
     ->group(function () {
@@ -48,4 +50,3 @@ Route::prefix('/bolim')
     });
 Route::any("login",[UserController::class,'index'])->name('login');;
 Route::any("register",[UserController::class,'register'])->name('register');;
-Route::post("update",[UserController::class,'update'])->name('update');;
