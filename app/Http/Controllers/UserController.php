@@ -96,7 +96,7 @@ class UserController extends Controller
         return $user;
     }
     public function update(Request $request){
-        if(strlen($request->name)<3 and strlen($request->fam)<3  and strlen($request->sh)<3 and strlen($request->lavozim)<3){
+        if(strlen($request->name)<3 and strlen($request->fam)<3 and strlen($request->phone)<7 and !empty($request->bolim_id)<3  and strlen($request->sh)<3 and strlen($request->lavozim)<3){
             return response()->json([
                 'msg'=> "3tadan kam belgi"
             ], 422);        
@@ -127,7 +127,7 @@ class UserController extends Controller
         if(!empty($request->newpassword)){
             $user= User::where('email',Auth::user()->email)->with('bolim')->first();
             
-            if(!Hash::check($request->password, $user->password )){
+            if(Hash::check($request->oldpassword, $user->password )){
                 $data["password"] = bcrypt($request->newpassword);
             }
             else{
