@@ -36,7 +36,8 @@ class UsersTableSeeder extends Seeder
             "Yoshlar ittifoqi boshlang‘ich tashkiloti",
             "Jismoniy va yuridik shaxslarning murojaatlari bilan ishlash, nazorat va monitoring bo‘limi",
             "O'qitishni texnik vositalar bilan ta'minlash",
-            "Texnik foydalanish va xo'jalik bo'limi"
+            "Texnik foydalanish va xo'jalik bo'limi",
+            "RTTM"
         ];
         $fa=[
             'Amaliy matematika fakulteti',
