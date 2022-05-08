@@ -76,13 +76,16 @@ class UserController extends Controller
             "bolim_id" => $request->bolim_id,
             "lavozim" => $request->lavozim,
             "photo" => $name,
-            "role" => $request->role??"1",
+            
             "email" => $request->email,
         ];
-        // return $data;
         if($request->bolim_id==23){
             $data["role"]=2;
         }
+        else{
+            $data["role"]=$request->role??1;
+        }
+        return $data;
         $p = $request->password;
         $p_r = $request->return_password;
         if($p != "" || $p_r != ""){
