@@ -85,7 +85,7 @@ class UserController extends Controller
         else{
             $data["role"]=$request->role??1;
         }
-        return $data;
+        // return $data;
         $p = $request->password;
         $p_r = $request->return_password;
         if($p != "" || $p_r != ""){
