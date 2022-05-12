@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Auth;
 */
 Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::post("update",[UserController::class,'update'])->name('update');
+    Route::post("getme",[UserController::class,'getme'])->name('update');
 
     Route::post('/logout', [UserController::class, 'logout']);
     Route::prefix('/message')

@@ -152,4 +152,18 @@ class UserController extends Controller
             'error'
         , 422);
     }
+    public function getme()
+    {
+        $user=User::where('email',Auth::user()->email)->with('bolim')->first();
+        $app_version=[
+            "type"=> 1,
+            "version"=> 1,
+            "release"=> "1.0.0",
+            "name"=> null,
+            "description"=> null
+        ];
+        return response()->json(
+            ['user'=>$user,'app_version'=>$app_version]
+        , 200);  
+    }
 }
