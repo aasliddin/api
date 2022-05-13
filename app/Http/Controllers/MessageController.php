@@ -16,7 +16,7 @@ class MessageController extends Controller
     {
         if(Auth::user()->role==1)
             {
-                $mes=Messages::where('user_id',Auth::user()->id)->with('worker.bolim')->with('user.bolim')->get();
+                $mes=Messages::where('user_id',Auth::user()->id)->with('worker.bolim')->with('user.bolim')->orderBy('updated_at', 'desc')->get();
                 return response()->json(
                     $mes
                 , 200);
