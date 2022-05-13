@@ -36,6 +36,9 @@ class ChatsController extends Controller
         $mes = Messages::find($request->message_id);
         $mes->text=$mes->text." ";
         $mes->save();
+        $mes = Messages::find($request->message_id);
+        $mes->text=trim($mes->text);
+        $mes->save();
         $name="";
         if(!empty($request->photo)){
             $name=  time().".".$request->photo->extension();
