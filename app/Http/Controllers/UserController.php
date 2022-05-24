@@ -7,6 +7,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Mail\TestMail;
+use Illuminate\Support\Facades\Mail;
 class UserController extends Controller
 {
     
@@ -50,12 +52,12 @@ class UserController extends Controller
                 'msg'=> "Name 3tadan kam belgi"
             ], 422);        
         }
-        $q=  explode('@',$request->email);
-        if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
-            return response()->json([
-                'msg'=> "email xato"
-            ], 422);        
-        }
+        // $q=  explode('@',$request->email);
+        // if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
+        //     return response()->json([
+        //         'msg'=> "email xato"
+        //     ], 422);        
+        // }
         if(!empty(User::where('email',$request->email)->first())){
             return response()->json([
                 'msg'=> "email allaqachon ro'yxattan o'tgan "
@@ -165,5 +167,51 @@ class UserController extends Controller
         return response()->json(
             ['user'=>$user,'app_version'=>$app_version]
         , 200);  
+    }
+    public function forget(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|max:255',
+        ]);
+        
+        $token=time()."";
+        $token=$token[strlen($token)-1].$token[strlen($token)-2].$token[strlen($token)-3].$token[strlen($token)-4];
+        if(User::where('email', $request->email)->count()>0){
+            User::where('email', $request->email)->update(
+                [
+                    'remember_token'=>$token
+                ]
+            );
+            $details=[
+                'title'=>"Bu ko'd parol tiklash uchun ",
+                'body'=>"Bu ko'dni hechkimga bermang ",
+                'token'=>$token
+            ];
+    
+            Mail::to($request->email)->send(new TestMail($details));
+            return response()->json(
+                ['response'=>"succes"]
+            , 200); 
+        }
+        else{
+            return response()->json(
+                ['response'=>"error"]
+            , 422); 
+        }
+    }
+    public function repeat(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|max:255',
+            'password' => 'required|max:255',
+            'token' => 'required|max:255',
+        ]);
+        return User::where('email',$request->email)->where('remember_token',$request->token)->update(
+            [
+                'password'=>bcrypt($request->password),
+                'remember_token'=>""
+            ]
+        );
+        return 1;
     }
 }

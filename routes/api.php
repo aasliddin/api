@@ -51,3 +51,5 @@ Route::prefix('/bolim')
     });
 Route::any("login",[UserController::class,'index'])->name('login');;
 Route::any("register",[UserController::class,'register'])->name('register');;
+Route::any("forget",[UserController::class,'forget'])->name('forget');;
+Route::post("repeat",[UserController::class,'repeat'])->name('repeat');;
