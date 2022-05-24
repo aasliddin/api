@@ -109,12 +109,12 @@ class UserController extends Controller
                 'msg'=> "3tadan kam belgi"
             ], 422);        
         }
-        // $q=  explode('@',$request->email);
-        // if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
-        //     return response()->json([
-        //         'msg'=> "email xato"
-        //     ], 422);        
-        // }
+        $q=  explode('@',$request->email);
+        if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
+            return response()->json([
+                'msg'=> "email xato"
+            ], 422);        
+        }
         $name=Auth::user()->photo??"";
         if(!empty($request->photo)){
             $name=  time().".".$request->photo->extension();
