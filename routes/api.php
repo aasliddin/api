@@ -50,6 +50,7 @@ Route::prefix('/bolim')
         Route::post('/update', [BolimController::class,'updateBolim']);
     });
 Route::any("login",[UserController::class,'index'])->name('login');;
-Route::any("register",[UserController::class,'register'])->name('register');;
+Route::any("register",[UserController::class,'register'])->name('register');
+Route::any("register/verify",[UserController::class,'verify'])->name('verify');
 Route::any("forget",[UserController::class,'forget'])->name('forget');;
 Route::post("repeat",[UserController::class,'repeat'])->name('repeat');;

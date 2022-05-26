@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Verify;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -42,66 +43,68 @@ class UserController extends Controller
     }
 
     public function register(Request $request){
-        if(empty($request->name)){
-            return response()->json([
-                'msg'=> "Name empty"
-            ], 422);        
-        }
-        if(strlen($request->name)<3){
-            return response()->json([
-                'msg'=> "Name 3tadan kam belgi"
-            ], 422);        
-        }
-        // $q=  explode('@',$request->email);
-        // if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
-        //     return response()->json([
-        //         'msg'=> "email xato"
-        //     ], 422);        
-        // }
-        if(!empty(User::where('email',$request->email)->first())){
-            return response()->json([
-                'msg'=> "email allaqachon ro'yxattan o'tgan "
-            ], 422);        
-        }
-        $name='';
-        if(!empty($request->photo)){
-            $name=  time().".".$request->photo->extension();
-            $a =  $request->photo->move(public_path('uploads/'), $name);
-            $name="uploads/".$name;
-        }
-       
-        $data = [
-            "name" => $request->name,
-            "fam" => $request->fam,
-            "sh" => $request->sh,
-            "phone" => $request->phone,
-            "bolim_id" => $request->bolim_id,
-            "lavozim" => $request->lavozim,
-            "photo" => $name,
-            
-            "email" => $request->email,
-        ];
-        if($request->bolim_id==23){
-            $data["role"]=2;
-        }
-        else{
-            $data["role"]=$request->role??1;
-        }
-        // return $data;
-        $p = $request->password;
-        $p_r = $request->return_password;
-        if($p != "" || $p_r != ""){
-            if($p != $p_r){
+        if(Verify::where('email',$request->email??"")->where('token',$request->token)->count()>0){
+            if(empty($request->name)){
                 return response()->json([
-                    'msg'=> "You entered two password differently"
+                    'msg'=> "Name empty"
                 ], 422);        
             }
-            $password = bcrypt($request->password);
-            $data["password"] = $password;
-        } 
+            if(strlen($request->name)<3){
+                return response()->json([
+                    'msg'=> "Name 3tadan kam belgi"
+                ], 422);        
+            }
+            $q=  explode('@',$request->email);
+            if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
+                return response()->json([
+                    'msg'=> "email xato"
+                ], 422);        
+            }
+            if(!empty(User::where('email',$request->email)->first())){
+                return response()->json([
+                    'msg'=> "email allaqachon ro'yxattan o'tgan "
+                ], 422);        
+            }
+            $name='';
+            if(!empty($request->photo)){
+                $name=  time().".".$request->photo->extension();
+                $a =  $request->photo->move(public_path('uploads/'), $name);
+                $name="uploads/".$name;
+            }
+           
+            $data = [
+                "name" => $request->name,
+                "fam" => $request->fam,
+                "sh" => $request->sh,
+                "phone" => $request->phone,
+                "bolim_id" => $request->bolim_id,
+                "lavozim" => $request->lavozim,
+                "photo" => $name,
+                "email" => $request->email,
+            ];
+            if($request->bolim_id==23){
+                $data["role"]=2;
+            }
+            else{
+                $data["role"]=$request->role??1;
+            }
+            // return $data;
+            $p = $request->password;
+            $p_r = $request->return_password;
+            if($p != "" || $p_r != ""){
+                if($p != $p_r){
+                    return response()->json([
+                        'msg'=> "You entered two password differently"
+                    ], 422);        
+                }
+                $password = bcrypt($request->password);
+                $data["password"] = $password;
+            } 
+            
+            $user = User::create($data);
+            return $user;
+        }
         
-        $user = User::create($data);
-        return $user;
     }
     public function update(Request $request){
         if(strlen($request->name)<3 and strlen($request->fam)<3 and strlen($request->phone)<7 and !empty($request->bolim_id)<3  and strlen($request->sh)<3 and strlen($request->lavozim)<3){
@@ -213,5 +216,39 @@ class UserController extends Controller
             ]
         );
         return 1;
+    }
+    public function verify(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|max:255',
+        ]);
+        
+        $token=time()."";
+        $token=$token[strlen($token)-1].$token[strlen($token)-2].$token[strlen($token)-3].$token[strlen($token)-4];
+        if(Verify::where('email', $request->email)->count()>0){
+            Verify::where('email', $request->email)->update(
+                [
+                    'token'=>$token
+                ]
+            );
+        }
+        else{
+            Verify::create(
+                [
+                    'email'=>$request->email,
+                    'token'=>$token
+                ]
+            ); 
+        }
+        $details=[
+            'title'=>"Ro'yxatdan o'tish paroli  ",
+            'body'=>"Bu ko'dni hechkimga bermang ",
+            'token'=>$token
+        ];
+
+        Mail::to($request->email)->send(new TestMail($details));
+        return response()->json(
+            ['response'=>"succes"]
+        , 200); 
     }
 }
