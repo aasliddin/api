@@ -104,7 +104,9 @@ class UserController extends Controller
             $user = User::create($data);
             return $user;
         }
-        
+        return response()->json(
+            ['status'=>0]
+        , 422);
     }
     public function update(Request $request){
         if(strlen($request->name)<3 and strlen($request->fam)<3 and strlen($request->phone)<7 and !empty($request->bolim_id)<3  and strlen($request->sh)<3 and strlen($request->lavozim)<3){
@@ -112,12 +114,7 @@ class UserController extends Controller
                 'msg'=> "3tadan kam belgi"
             ], 422);        
         }
-        $q=  explode('@',$request->email);
-        if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
-            return response()->json([
-                'msg'=> "email xato"
-            ], 422);        
-        }
+       
         $name=Auth::user()->photo??"";
         if(!empty($request->photo)){
             $name=  time().".".$request->photo->extension();
@@ -207,15 +204,15 @@ class UserController extends Controller
         $request->validate([
             'email' => 'required|max:255',
             'password' => 'required|max:255',
-            'token' => 'required|max:255',
+            'verify_code' => 'required|max:255',
         ]);
-        return User::where('email',$request->email)->where('remember_token',$request->token)->update(
+        return User::where('email',$request->email)->where('remember_token',$request->verify_code)->update(
             [
                 'password'=>bcrypt($request->password),
                 'remember_token'=>""
             ]
         );
-        return 1;
+        
     }
     public function verify(Request $request)
     {
