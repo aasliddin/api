@@ -201,11 +201,18 @@ class UserController extends Controller
     }
     public function repeat(Request $request)
     {
-        $request->validate([
-            'email' => 'required|max:255',
-            'password' => 'required|max:255',
-            'verify_code' => 'required|max:255',
-        ]);
+        $a = User::where('email',$request->email)->first();
+        if(empty($a)){
+        return response()->json(
+            ['response'=>"email"]
+        , 200); 
+        }
+       
+        if($request->verify_code!=$a->remember_token)
+        return response()->json(
+            ['response'=>"verify code"]
+        , 200); 
+        
         return User::where('email',$request->email)->where('remember_token',$request->verify_code)->update(
             [
                 'password'=>bcrypt($request->password),
