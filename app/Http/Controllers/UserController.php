@@ -170,9 +170,10 @@ class UserController extends Controller
     }
     public function forget(Request $request)
     {
-        $request->validate([
-            'email' => 'required|max:255',
-        ]);
+        if(empty($request->email))
+        return response()->json(
+            ['response'=>"email"]
+        , 200); 
         
         $token=time()."";
         $token=$token[strlen($token)-1].$token[strlen($token)-2].$token[strlen($token)-3].$token[strlen($token)-4];
@@ -223,10 +224,7 @@ class UserController extends Controller
     }
     public function verify(Request $request)
     {
-        $request->validate([
-            'email' => 'required|max:255',
-        ]);
-        
+    if(User::where('email', $request->email)->count()>0){ 
         $token=time()."";
         $token=$token[strlen($token)-1].$token[strlen($token)-2].$token[strlen($token)-3].$token[strlen($token)-4];
         if(Verify::where('email', $request->email)->count()>0){
@@ -254,5 +252,11 @@ class UserController extends Controller
         return response()->json(
             ['response'=>"succes"]
         , 200); 
+        }
+        else{
+            return response()->json(
+                ['response'=>"email"]
+            , 200); 
+        }
     }
 }
