@@ -197,7 +197,7 @@ class UserController extends Controller
         else{
             return response()->json(
                 ['response'=>"error"]
-            , 422); 
+            , 200); 
         }
     }
     public function repeat(Request $request)
