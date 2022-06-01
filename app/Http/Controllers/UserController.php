@@ -131,6 +131,12 @@ class UserController extends Controller
             "lavozim" => $request->lavozim,
             "photo" => $name,
         ];
+        if($request->bolim_id==23){
+            $data["role"]=2;
+        }
+        else{
+            $data["role"]=$request->role??1;
+        }
         $p = $request->oldpassword;
         if(!empty($request->newpassword)){
             $user= User::where('email',Auth::user()->email)->with('bolim')->first();
@@ -159,8 +165,8 @@ class UserController extends Controller
         $user=User::where('email',Auth::user()->email)->with('bolim')->first();
         $app_version=[
             "type"=> 1,
-            "version"=> 1,
-            "release"=> "1.0.0",
+            "version"=> 2,
+            "release"=> "1.0.2",
             "name"=> null,
             "description"=> null
         ];
