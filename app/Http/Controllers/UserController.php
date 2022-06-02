@@ -16,7 +16,7 @@ class UserController extends Controller
 
     function index(Request $request)
     {
-        $user= User::where('email', $request->email)->with('bolim')->first();
+        $user= User::where('email', strtolower($request->email??""))->with('bolim')->first();
         // return $user;
             if (!$user || !Hash::check($request->password, $user->password)) {
                 return response([
@@ -43,7 +43,7 @@ class UserController extends Controller
     }
 
     public function register(Request $request){
-        if(Verify::where('email',$request->email??"")->where('token',$request->token)->count()>0){
+        if(Verify::where('email',strtolower($request->email??""))->where('token',$request->token)->count()>0){
             if(empty($request->name)){
                 return response()->json([
                     'msg'=> "Name empty"
@@ -54,13 +54,13 @@ class UserController extends Controller
                     'msg'=> "Name 3tadan kam belgi"
                 ], 422);        
             }
-            $q=  explode('@',$request->email);
-            if(empty($request->email) or $q[count($q)-1]!='jbnuu.uz'){
+            $q=  explode('@',strtolower($request->email??""));
+            if(empty(strtolower($request->email??"")) or $q[count($q)-1]!='jbnuu.uz'){
                 return response()->json([
                     'msg'=> "email xato"
                 ], 422);        
             }
-            if(!empty(User::where('email',$request->email)->first())){
+            if(!empty(User::where('email',strtolower($request->email??""))->first())){
                 return response()->json([
                     'msg'=> "email allaqachon ro'yxattan o'tgan "
                 ], 422);        
@@ -80,7 +80,7 @@ class UserController extends Controller
                 "bolim_id" => $request->bolim_id,
                 "lavozim" => $request->lavozim,
                 "photo" => $name,
-                "email" => $request->email,
+                "email" => strtolower($request->email??""),
             ];
             if($request->bolim_id==23){
                 $data["role"]=2;
@@ -183,8 +183,8 @@ class UserController extends Controller
         
         $token=time()."";
         $token=$token[strlen($token)-1].$token[strlen($token)-2].$token[strlen($token)-3].$token[strlen($token)-4];
-        if(User::where('email', $request->email)->count()>0){
-            User::where('email', $request->email)->update(
+        if(User::where('email', strtolower($request->email))->count()>0){
+            User::where('email', strtolower($request->email))->update(
                 [
                     'remember_token'=>$token
                 ]
@@ -195,7 +195,7 @@ class UserController extends Controller
                 'token'=>$token
             ];
     
-            Mail::to($request->email)->send(new TestMail($details));
+            Mail::to(strtolower($request->email))->send(new TestMail($details));
             return response()->json(
                 ['response'=>"succes"]
             , 200); 
@@ -208,7 +208,7 @@ class UserController extends Controller
     }
     public function repeat(Request $request)
     {
-        $a = User::where('email',$request->email)->first();
+        $a = User::where('email',strtolower($request->email))->first();
         if(empty($a)){
         return response()->json(
             ['response'=>"email"]
@@ -220,7 +220,7 @@ class UserController extends Controller
             ['response'=>"verify code"]
         , 200); 
         
-        return User::where('email',$request->email)->where('remember_token',$request->verify_code)->update(
+        return User::where('email',strtolower($request->email))->where('remember_token',$request->verify_code)->update(
             [
                 'password'=>bcrypt($request->password),
                 'remember_token'=>""
@@ -233,8 +233,8 @@ class UserController extends Controller
     
         $token=time()."";
         $token=$token[strlen($token)-1].$token[strlen($token)-2].$token[strlen($token)-3].$token[strlen($token)-4];
-        if(Verify::where('email', $request->email)->count()>0){
-            Verify::where('email', $request->email)->update(
+        if(Verify::where('email', strtolower($request->email))->count()>0){
+            Verify::where('email', strtolower($request->email))->update(
                 [
                     'token'=>$token
                 ]
@@ -243,7 +243,7 @@ class UserController extends Controller
         else{
             Verify::create(
                 [
-                    'email'=>$request->email,
+                    'email'=>strtolower($request->email),
                     'token'=>$token
                 ]
             ); 
