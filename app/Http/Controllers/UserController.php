@@ -165,8 +165,8 @@ class UserController extends Controller
         $user=User::where('email',Auth::user()->email)->with('bolim')->first();
         $app_version=[
             "type"=> 1,
-            "version"=> 2,
-            "release"=> "1.0.2",
+            "version"=> 3,
+            "release"=> "1.0.3",
             "name"=> null,
             "description"=> null
         ];
